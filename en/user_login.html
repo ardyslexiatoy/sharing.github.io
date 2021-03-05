@@ -1,0 +1,177 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+	<title>C.A.R.D. | User Login</title>
+	<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+  <link rel="stylesheet" href="../Library/fontawesome/css/all.css">
+	<link rel="icon" href="https://cdn-cms.f-static.net/uploads/2196940/normal_5def16022d258.png">
+	<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
+	<!-- The core Firebase JS SDK is always required and must be listed first -->
+	<script src="https://www.gstatic.com/firebasejs/7.12.0/firebase-app.js"></script>
+	<script src="https://www.gstatic.com/firebasejs/7.12.0/firebase-auth.js"></script>
+	<script src="https://www.gstatic.com/firebasejs/7.12.0/firebase-database.js"></script>
+	<!--Login_v5 Library-->
+	<link rel="stylesheet" type="text/css" href="../Login_v5/vendor/bootstrap/css/bootstrap.min.css">
+	<link rel="stylesheet" type="text/css" href="../Login_v5/fonts/font-awesome-4.7.0/css/font-awesome.min.css">
+	<link rel="stylesheet" type="text/css" href="../Login_v5/fonts/Linearicons-Free-v1.0.0/icon-font.min.css">
+	<link rel="stylesheet" type="text/css" href="../Login_v5/vendor/animate/animate.css">
+	<link rel="stylesheet" type="text/css" href="../Login_v5/vendor/css-hamburgers/hamburgers.min.css">
+	<link rel="stylesheet" type="text/css" href="../Login_v5/vendor/animsition/css/animsition.min.css">
+	<link rel="stylesheet" type="text/css" href="../Login_v5/vendor/select2/select2.min.css">
+	<link rel="stylesheet" type="text/css" href="../Login_v5/vendor/daterangepicker/daterangepicker.css">
+	<link rel="stylesheet" type="text/css" href="../Login_v5/css/util.css">
+	<link rel="stylesheet" type="text/css" href="../Login_v5/css/main.css">
+	<!--custom file-->
+	<link rel="stylesheet" href="../css/user.css">
+	<link rel="stylesheet" href="../css/lang.css">
+	<link rel="stylesheet" href="../css/style.css">
+	<link rel="stylesheet" href="../css/header.css">
+	<script src="../js/firebase.js"></script>
+	<script src="../js/lang.js"></script>
+</head>
+<body class="user-body">
+	<!--navbar-->
+	<header>
+			<div>
+				<a href="index.html"><img src="../Sources/img/WebLogo.png" alt="Web logo"></a>
+				<a href="index.html"><h1>Augmented Reality Game for Identifying Early-age School Kids with Dyslexia</h1></a>
+			</div>
+			
+			<input type="checkbox" id="sub-menu-toggle">
+			<label for="sub-menu-toggle">
+	      <div class="nav-icon3-container">
+	        <div id="nav-icon3">
+	          <span></span>
+	          <span></span>
+	          <span></span>
+	          <span></span>
+	        </div>
+	      </div>
+			</label>
+		
+			<ul>
+				<li><a href="#main">MAIN</a></li>
+				<li><a href="#latest-news">LATEST NEWS</a></li>
+				<li><a href="#" class="drop-down">MORE<i class="fas fa-caret-down" id="dropdown-icon"></i></a>
+					<ul>
+						<li><a href="#idea">IDEA OF INVENTION</a></li>
+						<li><a href="#feature">INVENTION FEATURE</a></li>
+						<li><a href="#work-flow">INVENTION WORKFLOW</a></li>
+						<li><a href="#report">ANALYSIS REPORT</a></li>
+						<li><a href="#awards">AWARDS</a></li>
+						<li><a href="#recognition">RECOGNITION</a></li>
+						<li><a href="#video">VIDEO INTRODUCTION</a></li>
+						<li><a href="#timeline">INVENTION TIMELINE</a></li>
+						<li><a href="#" onclick="GotoBlog()">C.A.R.D. News</a></li>
+					</ul>
+				</li>
+				<!-- <li><a href="store.html" target="_blank">商店Beta</a></li> -->
+				<li><a id="lang-selector" onclick="OpenLang()"  ><i class="fas fa-globe-europe" id="language-icon"></i></a></li>
+				<li id="user-acc"><a href="#" class="drop-down"><i class="fas fa-user" id="user-icon"></i></a>
+					<ul class="acc-drop-down-menu">
+						<li><a href="#" id="acc-manager" onclick="UserAccEvent()"></a></li>
+					</ul>
+				</li>
+			</ul>
+	</header>
+	
+	<div class="header-box"></div>
+	
+	<section class="user-info">
+		<div class="content-title-container">
+			<h1>User Login</h1>
+			<hr>
+		</div>
+		
+
+		<form class="login100-form validate-form flex-sb flex-w">
+
+			<div class="p-t-31 p-b-9">
+				<span class="txt1">
+					Email
+				</span>
+			</div>
+			<div class="wrap-input100 validate-input" data-validate = "Email is required">
+				<input class="input100" type="email" name="username" id="email">
+				<span class="focus-input100"></span>
+			</div>
+
+			<div class="p-t-13 p-b-9" id="login-pw">
+				<span class="txt1">
+					Password
+				</span>
+				<a href="Reset_Pw.html" class="forgot-pw">Forgot password</a>
+				
+			</div>
+			<div class="wrap-input100 validate-input" data-validate = "Password is required">
+				<input class="input100" type="password" name="pass" id="password">
+				
+				<input type="checkbox" id="pw-toggle" onclick="PwToggle()">
+				<label for="pw-toggle"><i class="fas fa-eye" id="pw-tpggle-btn"></i></label>
+				<span class="focus-input100"></span>
+			</div>
+
+			<div class="container-login100-form-btn m-t-17">
+				<button type="button" class="login100-form-btn" onclick="SignIn()" id="sign-in">
+					Log In
+				</button>
+			</div>
+			
+			<div class="w-full text-center p-t-55">
+				<span class="txt2">
+					Not a member?
+				</span>
+
+				<a href="user_create.html" class="txt2 bo1">
+					Sign up now
+				</a>
+			</div>
+		</form>
+		<div id="dropDownSelect1"></div>
+	</section>
+	
+	<div class="popup-div" id="subscribe-popup">
+		<div class="popup-container">
+			<p id="popup-content">Let subscribe our web to get the latest news of us and access to the C.A.R.D. News!</p>
+			
+			<div class="popup-btn">
+				<button onclick="PopupSubscribe()" id="subscribe">Subscribe</button>
+				<button onclick="ContinueToWeb()" id="continue-to-web">Continue To Web</button>
+			</div>
+			
+			<i class="fas fa-times cancel" onclick="ClosePopup()"></i>
+		</div>
+	</div>
+	
+	<!--language-seletor-->
+	<div class="lang">
+		<div class="lang-container">
+			<ul>
+				<li><a href="../user_login.html">Chinese(Traditional)</a></li>
+				<li><a href="user_login.html">English</a></li>
+			</ul>
+			
+			<i class="fas fa-times lang-cancel" onclick="CloseLang()"></i>
+		</div>
+	</div>
+	
+	<!--Login_v5 Library-->
+	<script src="../Login_v5/vendor/jquery/jquery-3.2.1.min.js"></script>
+	<script src="../Login_v5/vendor/animsition/js/animsition.min.js"></script>
+	<script src="../Login_v5/vendor/bootstrap/js/popper.js"></script>
+	<script src="../Login_v5/vendor/bootstrap/js/bootstrap.min.js"></script>
+	<script src="../Login_v5/vendor/select2/select2.min.js"></script>
+	<script src="../Login_v5/vendor/daterangepicker/moment.min.js"></script>
+	<script src="../Login_v5/vendor/daterangepicker/daterangepicker.js"></script>
+	<script src="../Login_v5/vendor/countdowntime/countdowntime.js"></script>
+	<script src="../Login_v5/js/main.js"></script>
+	
+	<!-- script -->
+	<script src="../js/firebase.js"></script>
+	<script src="../js/lang.js"></script>
+	<script src="../js/PwToggle.js"></script>
+	<script src="../js/HamburgerIconAnim.js"></script>
+</body>
+</html>

@@ -1,0 +1,101 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+	<title>C.A.R.D. | User Sign Up</title>
+	<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+  <link rel="stylesheet" href="../Library/fontawesome/css/all.css">
+	<link rel="icon" href="https://cdn-cms.f-static.net/uploads/2196940/normal_5def16022d258.png">
+	<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
+	<!-- The core Firebase JS SDK is always required and must be listed first -->
+	<script src="https://www.gstatic.com/firebasejs/7.12.0/firebase-app.js"></script>
+	<script src="https://www.gstatic.com/firebasejs/7.12.0/firebase-auth.js"></script>
+	<script src="https://www.gstatic.com/firebasejs/7.12.0/firebase-database.js"></script>
+	<!--custom style-->
+	<link rel="stylesheet" href="../css/style.css">
+	<link rel="stylesheet" href="../css/lang.css">
+	<link rel="stylesheet" href="../css/vertification.css">
+	<link rel="stylesheet" href="../css/header.css">
+</head>
+<body>
+	<!--navbar-->
+	<header>
+			<div>
+				<a href="index.html"><img src="../Sources/img/WebLogo.png" alt="Web logo"></a>
+				<a href="index.html"><h1>Augmented Reality Game for Identifying Early-age School Kids with Dyslexia</h1></a>
+			</div>
+			
+			<input type="checkbox" id="sub-menu-toggle">
+			<label for="sub-menu-toggle">
+	      <div class="nav-icon3-container">
+	        <div id="nav-icon3">
+	          <span></span>
+	          <span></span>
+	          <span></span>
+	          <span></span>
+	        </div>
+	      </div>
+			</label>
+		
+			<ul>
+				<li><a href="#main">MAIN</a></li>
+				<li><a href="#latest-news">LATEST NEWS</a></li>
+				<li><a href="#" class="drop-down">MORE<i class="fas fa-caret-down" id="dropdown-icon"></i></a>
+					<ul>
+						<li><a href="#idea">IDEA OF INVENTION</a></li>
+						<li><a href="#feature">INVENTION FEATURE</a></li>
+						<li><a href="#work-flow">INVENTION WORKFLOW</a></li>
+						<li><a href="#report">ANALYSIS REPORT</a></li>
+						<li><a href="#awards">AWARDS</a></li>
+						<li><a href="#recognition">RECOGNITION</a></li>
+						<li><a href="#video">VIDEO INTRODUCTION</a></li>
+						<li><a href="#timeline">INVENTION TIMELINE</a></li>
+						<li><a href="#" onclick="GotoBlog()">C.A.R.D. News</a></li>
+					</ul>
+				</li>
+				<!-- <li><a href="store.html" target="_blank">商店Beta</a></li> -->
+				<li><a id="lang-selector" onclick="OpenLang()"  ><i class="fas fa-globe-europe" id="language-icon"></i></a></li>
+				<li id="user-acc"><a href="#" class="drop-down"><i class="fas fa-user" id="user-icon"></i></a>
+					<ul class="acc-drop-down-menu">
+						<li><a href="#" id="acc-manager" onclick="UserAccEvent()"></a></li>
+					</ul>
+				</li>
+			</ul>
+	</header>
+	
+	<div class="header-box"></div>
+	
+	<section class="vertification">
+		<div class="vertification-container">
+			<div class="vertification-message">
+				<h1>Verification</h1>
+				<hr>
+				<p>Verification Email Has Sent To You. If you don't see it in your indox, remember to check your spam folder.</p>
+			</div>
+
+			<div class="vertification-btn-group">
+				<button class="confirm" onclick="ConfirmVertification()">Confirm</button>
+				<button class="resend" onclick="Vertification()">Resend</button>
+			</div>
+		</div>
+	</section>
+	
+	<!--language-seletor-->
+	<div class="lang">
+		<div class="lang-container">
+			<ul>
+				<li><a href="../vertification.html">Chinese(Traditional)</a></li>
+				<li><a href="vertification.html">English</a></li>
+			</ul>
+			
+			<i class="fas fa-times lang-cancel" onclick="CloseLang()"></i>
+		</div>
+	</div>
+</body>
+
+	<!-- script -->
+	<script src="../js/firebase.js"></script>
+	<script src="../js/lang.js"></script>
+	<script src="../js/HamburgerIconAnim.js"></script>
+</html>

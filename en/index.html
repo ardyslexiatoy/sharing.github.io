@@ -1,0 +1,813 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+	<title>C.A.R.D.</title>
+
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+  <link rel="stylesheet" href="../Library/fontawesome/css/all.css">
+	<link rel="stylesheet" href="../Library/aos/aos.css">
+  <link href="https://fonts.googleapis.com/css?family=Bungee+Hairline|Open+Sans" rel="stylesheet">
+	<link rel="icon" href="https://cdn-cms.f-static.net/uploads/2196940/normal_5def16022d258.png">
+	<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
+	<script src="https://use.fontawesome.com/4d74086fc6.js"></script>
+	<script src="../Library/aos/aos.js"></script>
+	<script src="../Library/Rellax Parallax Scrolling/rellax.min.js"></script>
+	<!-- The core Firebase JS SDK is always required and must be listed first -->
+	<script src="https://www.gstatic.com/firebasejs/7.12.0/firebase-app.js"></script>
+	<script src="https://www.gstatic.com/firebasejs/7.12.0/firebase-auth.js"></script>
+	<script src="https://www.gstatic.com/firebasejs/7.12.0/firebase-database.js"></script>
+	<!--slider-->
+	<!--	<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/normalize/5.0.0/normalize.min.css">-->
+	<link rel='stylesheet prefetch' href='http://cdn.jsdelivr.net/jquery.slick/1.5.9/slick.css'>
+	<link rel='stylesheet prefetch' href='http://cdn.jsdelivr.net/jquery.slick/1.5.9/slick.css'>
+	<link rel="stylesheet" href="css/slider.css">
+	<script src='http://cdnjs.cloudflare.com/ajax/libs/jquery/2.1.3/jquery.min.js'></script>
+	<script src='http://cdn.jsdelivr.net/jquery.slick/1.5.9/slick.min.js'></script>
+	<script src='https://cdnjs.cloudflare.com/ajax/libs/gsap/1.18.2/TweenMax.min.js'></script>
+	<!-- owl carousel -->
+	<link rel="stylesheet" href="../Library/OwlCarousel2-2.3.4/dist/assets/owl.carousel.min.css">
+	<link rel="stylesheet" href="../Library/OwlCarousel2-2.3.4/dist/assets/owl.theme.default.min.css">
+	<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
+	<script src="../Library/OwlCarousel2-2.3.4/dist/owl.carousel.min.js"></script>
+	<!--custom style-->
+	<link rel="stylesheet" href="../css/user.css">
+	<link rel="stylesheet" href="../css/lang.css">
+	<link rel="stylesheet" href="../css/time_line.css">
+	<link rel="stylesheet" href="../css/style.css">
+	<link rel="stylesheet" href="../css/owl_carousel.css">
+	<link rel="stylesheet" href="../css/header.css">
+</head>
+
+<body id="body">
+	<!-- Back to top button -->
+	<a class="scroll-top">
+		<span id="scroll-back-btn"><i class="fas fa-chevron-up"></i></span>
+	</a>
+
+	<!--navbar-->
+	<header>
+			<div>
+				<a href="index.html"><img src="../Sources/img/WebLogo.png" alt="Web logo"></a>
+				<a href="index.html"><h1>Augmented Reality Game for Identifying Early-age School Kids with Dyslexia</h1></a>
+			</div>
+			
+			<input type="checkbox" id="sub-menu-toggle">
+			<label for="sub-menu-toggle">
+	      <div class="nav-icon3-container">
+	        <div id="nav-icon3">
+	          <span></span>
+	          <span></span>
+	          <span></span>
+	          <span></span>
+	        </div>
+	      </div>
+			</label>
+		
+			<ul>
+				<li><a href="#main">MAIN</a></li>
+				<li><a href="#latest-news">LATEST NEWS</a></li>
+				<li><a href="#" class="drop-down">MORE<i class="fas fa-caret-down" id="dropdown-icon"></i></a>
+					<ul>
+						<li><a href="#idea">IDEA OF INVENTION</a></li>
+						<li><a href="#feature">INVENTION FEATURE</a></li>
+						<li><a href="#work-flow">INVENTION WORKFLOW</a></li>
+						<li><a href="#report">ANALYSIS REPORT</a></li>
+						<li><a href="#awards">AWARDS</a></li>
+						<li><a href="#recognition">RECOGNITION</a></li>
+						<li><a href="#video">VIDEO INTRODUCTION</a></li>
+						<li><a href="#timeline">INVENTION TIMELINE</a></li>
+						<li><a href="#" onclick="GotoBlog()">C.A.R.D. News</a></li>
+					</ul>
+				</li>
+				<!-- <li><a href="store.html" target="_blank">商店Beta</a></li> -->
+				<li><a id="lang-selector" onclick="OpenLang()"  ><i class="fas fa-globe-europe" id="language-icon"></i></a></li>
+				<li id="user-acc"><a href="#" class="drop-down"><i class="fas fa-user" id="user-icon"></i></a>
+					<ul class="acc-drop-down-menu">
+						<li><a href="#" id="acc-manager" onclick="UserAccEvent()"></a></li>
+					</ul>
+				</li>
+			</ul>
+	</header>
+
+	<div class="header-box" id="main"></div>
+	
+	<section class="main rellax" data-rellax-speed="-8">
+<!--		<img src="Sources/img/MainBackground.jpg" alt="Background holder" class="background-holder">-->
+	
+		<div class="main-container">
+			<div class="main-content rellax" data-rellax-speed="3">
+				<h1>C.A.R.D. - Augmented Reality Game for Identifying Early-age School Kids with Dyslexia</h1>
+
+				<p>Packages for early identifying Dyslexic kids.</p>
+			</div>
+		</div>
+	</section>
+
+	<section class="latest-news" id="latest-news"><div class="header-box"></div>
+	
+		<div class="content-title-container">
+			<h1>Latest News</h1>
+			<hr>
+		</div>
+
+		<div class="latest-news-carousel-container" data-aos="fade-up">
+			<div class="wrapper">
+				<div class="owl-carousel owl-theme">
+					<div class="item">
+			    	<div class="latest-news-content-container">
+							<img src="../Sources/img/Awards/HKSSPC2020.jpg" alt="HKSSPC">
+
+							<p>Our team is fortunate to win the Champion in Invention Projects (Type A) of Senior Division of the Hong Kong Student Science Project Competition 2020. <br>
+							Many thanks to your support!
+						</div>
+					</div>
+			    <div class="item">
+			    	<div class="latest-news-content-container">
+							<a href="#" onclick="GotoBlog()"><img src="../Sources/img/WebLogo.png" alt="Web Logo"></a>
+
+							<p>Our team is developing a new blog for sharing the latest technology news. Let's feel free to subscribe and join C.A.R.D. News!</p>
+						</div>
+					</div>
+				</div>
+							
+				<div class="control">
+					<div class="nav-control">
+						<span class="prev nav-btn"><i class="fas fa-angle-left"></i></span>
+						<span class="next nav-btn"><i class="fas fa-angle-right"></i></span>
+					</div>
+					<!-- <div class="auto-play-control">
+						<span class="auto-btn" onclick="AutoPlayController()"><i class="fas fa-pause-circle" id="play-pause-btn"></i></span>
+					</div> -->
+				</div>
+			</div>
+		</div>
+	</section>
+
+	<!--<center class="ads">
+	  <script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js"></script>
+	   CARD_01 
+	  <ins class="adsbygoogle"
+	      style="display:block"
+	      data-ad-client="ca-pub-6881562947845271"
+	      data-ad-slot="2775332495"
+	      data-ad-format="auto"
+	      data-full-width-responsive="true"></ins>
+	  <script>
+	      (adsbygoogle = window.adsbygoogle || []).push({});
+	  </script>
+	</center>-->
+
+	<section class="idea" id="idea"><div class="header-box"></div>
+		<div data-aos="fade-up" class="content-title-container">
+			<h1>IDEA OF INVENTION</h1>
+			<hr>
+		</div>
+		
+		<p data-aos="fade-up">The invention aims to achieve the early diagnosis of Dyslexia to 4 – 8 years old children, which can be widely adopted on mobile devices, through a gamified and interactive manner. The early identification of Dyslexia can improve the effectiveness of the treatment. We applied 3D printing, Augmented reality, and gamification to prepare our testing materials and digital solution. With the capability of early identification, parents and school can help their children during prime time.</p>
+	</section>
+	
+	<section class="feature" id="feature"><div class="header-box"></div>
+		<div data-aos="fade-up" class="content-title-container">
+			<h1>INVENTION FEATURE</h1>
+			<hr>
+		</div>
+		
+		<div data-aos="fade-up" class="feature-content-container">
+			<p> <strong>Using Augmented Reality technology to match gamified learning:</strong> <br> At home, we can make it easy for students to use the mobile app at home with a simple test package. Different AR toys can also train pre-school children in identifying the "same" and "different" abilities, such as color and shape.</p>
+			<p> <strong>Identifying student without words:</strong> <br> Compared with the mobile phone application in society now a day, we mainly use graphics and patterns to create identification packages. We hope to identify potential cases of Dyslexia for preschool children as early as possible to avoid being ignored because of a lack of knowledge about the text.</p>
+			<p> <strong>Combining Artificial Intelligence to monitor student learning (future development):</strong> <br> When the student uses the test kit on the mobile application, the front lens on the mobile phone cooperates with the Artificial Intelligence technology to identify the facial expression and concentration of the schoolchild to follow up on the learning situation of the schoolchild in the recognition process.</p>
+		</div>
+	</section>
+
+	<!--<center class="ads">
+	  <script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js"></script>
+	   CARD_03 
+	  <ins class="adsbygoogle"
+	       style="display:block"
+	       data-ad-client="ca-pub-6881562947845271"
+	       data-ad-slot="8732212663"
+	       data-ad-format="auto"
+	       data-full-width-responsive="true"></ins>
+	  <script>
+	       (adsbygoogle = window.adsbygoogle || []).push({});
+	  </script>
+	</center>-->
+	
+	<section class="work-flow" id="work-flow"><div class="header-box"></div>
+		<div data-aos="fade-up" class="content-title-container">
+			<h1>INVENTION WORKFLOW</h1>
+			<hr>
+		</div>
+		
+		<div data-aos="fade-up" class="work-flow-content-container">
+			<div class="flow-odd-container">
+				<img src="../Sources/img/WorkFlow1.jpg" alt="WorkFlow1">
+				
+				<p>1. Open the augmented reality function by parent's assistance</p>
+			</div>
+			
+			<div class="flow-even-container">
+				<img src="../Sources/img/WorkFlow2.jpg" alt="WorkFlow2">
+				
+				<p>2. Using the camera of the device to recognize the picture of the characters</p>
+				<!-- Recognize the image by scanning the bottom of the character using the camera -->
+			</div>
+			
+			<div class="flow-odd-container">
+				<img src="../Sources/img/WorkFlow3.jpg" alt="WorkFlow3">
+				
+				<p>3. A game scene will appear on the device</p>
+			</div>
+			
+			<div class="flow-even-container">
+				<img src="../Sources/img/WorkFlow4.jpg" alt="WorkFlow4">
+				
+				<p>4. After three-game scenes, you'll enter the next level of the game</p>
+			</div>
+		</div>
+	</section>
+	
+	<section class="report" id="report"><div class="header-box"></div>
+		<div data-aos="fade-up" class="content-title-container">
+			<h1>ANALYSIS REPORT</h1>
+			<hr>
+		</div>
+		
+		<div data-aos="fade-up" class="report-content-container">
+			<div class="report-img-container">
+				<img src="../Sources/img/Bad.jpg" alt="ScoreLow">
+				<img src="../Sources/img/Good.jpg" alt="ScoreHigh">
+			</div>
+			
+			<p>If the student gets a low score, it means that the student may have a larger tendency to Dyslexia. It is recommended to seek expert assistance. <br> In contrast, if the student gets a high score, it means that the student may have a smaller tendency to Dyslexia.</p>
+		</div>
+	</section>
+
+	<!--<center class="ads">
+	  <script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js"></script>
+	   CARD_04 
+	  <ins class="adsbygoogle"
+	       style="display:block"
+	       data-ad-client="ca-pub-6881562947845271"
+	       data-ad-slot="7883640204"
+	       data-ad-format="auto"
+	       data-full-width-responsive="true"></ins>
+	  <script>
+	       (adsbygoogle = window.adsbygoogle || []).push({});
+	  </script>
+	</center>-->
+	
+	<section class="awards" id="awards"><div class="header-box"></div>
+		<div data-aos="fade-up" class="content-title-container">
+			<h1>AWARDS</h1>
+			<hr>
+		</div>
+		
+		<div data-aos="fade-up" class="awards-content-container">
+			<div class="awards-cell-container">
+				<div class="img-cropper">
+					<img src="../Sources/img/Awards/APICTA.jpg" alt="APICTA">
+				</div>	
+				<h3>2019 Asia Pacific ICT Awards</h3>
+				<p>Merit Award in Senior Students Group</p>
+			</div>
+
+			<div class="awards-cell-container">
+				<div class="img-cropper">
+					<img src="../Sources/img/Awards/CASTIC_1.JPG" alt="CASTIC_1" id="img-adj-CASTIC-1">
+				</div>	
+				<h3>The 34th China Adolescents Youth Science and Technology Innovation Contest</h3>
+				<p>First Place Award in Computer Science and  Information Technology</p>
+			</div>
+			
+			<div class="awards-cell-container">
+				<div class="img-cropper">
+					<img src="../Sources/img/Awards/CASTIC_2.JPG" alt="CASTIC_2" id="img-adj-CASTIC-2">
+				</div>	
+				<h3>The 34th China Adolescents Youth Science and Technology Innovation Contest</h3>
+				<p>CITIC TELECOM International Award</p>
+			</div>
+			
+			<div class="awards-cell-container">
+				<div class="img-cropper">
+					<img src="../Sources/img/Awards/CASTIC_3.JPG" alt="CASTIC_3">
+				</div>	
+				<h3>The 34th China Adolescents Youth Science and Technology Innovation Contest</h3>
+				<p>Macao ICBC Technology Innovation Award</p>
+			</div>
+			
+			<div class="awards-cell-container">
+				<div class="img-cropper">
+					<img src="../Sources/img/Awards/HKICTA.jpg" alt="HKICTA">
+				</div>
+				
+				<h3>Hong Kong ICT Awards 2019</h3>
+				<p>Student Innovation Award Bronze Award</p>
+			</div>
+
+			<div class="awards-cell-container">
+				<div class="img-cropper">
+					<img src="../Sources/img/Awards/HKSSPC2020.jpg" alt="HKSSPC" id="img-adj-hksspc">
+				</div>
+				
+				<h3>Hong Kong Student Science Project Competition 2020</h3>
+				<p>Champion in Invention Projects (Type A) of Senior Division</p>
+			</div>
+
+			<div class="awards-cell-container">
+				<div class="img-cropper">
+					<img src="../Sources/img/Awards/STEMExcellence.jpg" alt="STEMExcellence" id="img-adj-stem-exc">
+				</div>
+				
+				<h3>The Greater Bay Area STEM Excellence Award 2020 (Hong Kong)</h3>
+				<p>Gold Award in Senior Section</p>
+			</div>
+			
+			<div class="awards-cell-container">
+				<div class="img-cropper">
+					<img src="../Sources/img/Awards/21st_1.JPG" alt="21st_1">
+				</div>	
+				<h3>The 21st Hong Kong Youth Science and Technology Invention Competition</h3>
+				<p>First Place in Computer Science and  Information Technology (Senior section)</p>
+			</div>
+			
+			<div class="awards-cell-container">
+				<div class="img-cropper">
+					<img src="../Sources/img/Awards/21st_2.JPG" alt="21st_2" id="img-adj-21st-bull-b-tech">
+				</div>	
+				<h3>The 21st Hong Kong Youth Science and Technology Invention Competition</h3>
+				<p>Bull.B Tech Award for Computer Science and Information Technology</p>
+			</div>
+			
+			<div class="awards-cell-container">
+				<div class="img-cropper">
+					<img src="../Sources/img/Awards/21st_3.JPG" alt="21st_3">
+				</div>	
+				<h3>The 21st Hong Kong Youth Science and Technology Invention Competition</h3>
+				<p>Regional Affiliate Award for Intel International Science and Engineering Grand Prix Intel Special Computer Science Special Award</p>
+			</div>
+			
+			<div class="awards-cell-container">
+				<div class="img-cropper">
+					<img src="../Sources/img/Awards/Samsung.JPG" alt="Samsung">
+				</div>	
+				<h3>Samsung Solve for Tomorrow 2018</h3>
+				<p>1st Runner Up</p>
+			</div>
+
+			<div class="awards-cell-container">
+				<div class="img-cropper">
+					<img src="../Sources/img/Awards/TheGreaterBay2019.png" alt="TheGreaterBay2019">
+				</div>	
+				<h3>2019 Qianhai Guangdong-Hong Kong-Macao Youth Innovation and Entrepreneurship Competition</h3>
+				<p>Merit Award in Senior Students Group</p>
+			</div>
+			
+			<div class="awards-cell-container">
+				<div class="img-cropper">
+					<img src="../Sources/img/Awards/SmartCity.JPG" alt="SmartCity">
+				</div>	
+				<h3>Smart City Project Programme 2018/19</h3>
+				<p>Outstanding Smart City Project Award</p>
+			</div>
+
+			<div class="awards-cell-container">
+				<div class="img-cropper">
+					<img src="../Sources/img/Awards/Engineer.png" alt="Engineer" id="img-adj-engineer">
+				</div>
+				
+				<h3>The Second Future Engineer Grand Challenge</h3>
+				<p>Merit Award in Senior Section</p>
+			</div>
+			
+			<div class="awards-cell-container">
+				<div class="img-cropper">
+					<img src="../Sources/img/Awards/LST.jpg" alt="LST">
+				</div>	
+				<h3>The 1st Caring for the Weak Community - Hong Kong Innovative Technology Design Competition</h3>
+				<p>Special Recognition Award</p>
+			</div>
+			
+			<div class="awards-cell-container">
+				<div class="img-cropper">
+					<img src="../Sources/img/Awards/LST.jpg" alt="LST">
+				</div>	
+				<h3>The 1st Caring for the Weak Community - Hong Kong Innovative Technology Design Competition</h3>
+				<p>Excellent Functional and Interface Design Award</p>
+			</div>
+		</div>
+	</section>	
+
+	<!-- <center class="ads">
+	  <script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js"></script>
+	   CARD_05
+	  <ins class="adsbygoogle"
+	       style="display:block"
+	       data-ad-client="ca-pub-6881562947845271"
+	       data-ad-slot="6570558536"
+	       data-ad-format="auto"
+	       data-full-width-responsive="true"></ins>
+	  <script>
+	       (adsbygoogle = window.adsbygoogle || []).push({});
+	  </script>
+	</center> -->
+		
+	<section class="recognition" id="recognition"><div class="header-box"></div>
+		<div data-aos="fade-up" class="content-title-container">
+			<h1>RECOGNITION</h1>
+			<hr>
+		</div>
+		
+		<div data-aos="fade-up" class="recognition-content-container">
+			<div class="recognition-box">
+				<a href="https://www.pcmarket.com.hk/2019/09/04/stem%E5%AD%95%E8%82%B2%E6%88%90%E6%9E%9C%E3%80%80%E4%B8%AD%E5%AD%B8%E7%94%9F%E5%8A%A9sen%E8%A8%AD%E8%A8%88/amp/" target="_blank"><img src="../Sources/img/Recognition/pcm.png" alt="pcm"></a>
+			</div>
+			
+			<div class="recognition-box">
+				<a href="https://ezone.ulifestyle.com.hk/article/2342750/%E5%B1%95%E7%A4%BA%E5%AD%B8%E7%94%9F%E5%89%B5%E7%A7%91%E5%8D%93%E8%B6%8A%E6%88%90%E5%B0%B1%E4%BB%A5%E5%89%B5%E7%A7%91%E6%8A%80%E8%A1%93%E5%8D%94%E5%8A%A9%E5%BC%B1%E5%8B%A2%E7%A4%BE%E7%BE%A4" target="_blank"><img src="../Sources/img/Recognition/ezone.png" alt="ezone"></a>
+			</div>
+			
+			<div class="recognition-box">
+				<a href="https://www.hk01.com/%E7%A4%BE%E5%8D%80%E5%B0%88%E9%A1%8C/291594/%E5%90%8C%E8%B7%AF%E4%BA%92%E5%8A%A9-%E5%90%8C%E7%82%BA%E9%81%8E%E4%BE%86%E4%BA%BA-%E5%AD%B8%E7%94%9F%E5%9C%98%E9%9A%8A%E7%A0%94%E5%89%B5%E6%84%8F%E7%A8%8B%E5%BC%8F%E5%8A%A9sen%E5%AD%B8%E7%AB%A5?itm_source=universal_search&itm_campaign=universal_search&itm_content=all&itm_medium=web" target="_blank"><img src="../Sources/img/Recognition/hk01.png" alt="hk01"></a>
+			</div>
+			
+			<div class="recognition-box">
+				<a href="https://news.looop.hk/posts/8215/-%E5%9C%88%E7%9F%AD%E7%89%87-%E7%8E%A9%E9%81%8A%E6%88%B2%E8%AD%98%E5%88%A5SEN-%E5%90%8C%E5%AD%B8%E6%82%A3%E8%AE%80%E5%AF%AB%E9%9A%9C%E7%A4%99-%E5%95%9F%E7%99%BC%E4%B8%AD%E5%AD%B8%E7%94%9F%E7%99%BC%E6%98%8E%E5%AE%B6-%E9%BB%83%E8%AB%BE%E8%AC%99-AR%E6%84%9B%E5%BF%83%E7%8E%A9%E5%85%B7%E5%8A%A9%E8%A9%95%E4%BC%B0%E6%82%A3%E7%97%85%E9%A2%A8%E9%9A%AA-%E5%B0%8F%E4%B8%80%E5%A7%8B%E8%BC%94%E5%B0%8E%E6%88%90%E5%8A%9F%E7%8E%87%E9%81%94%E9%80%BE%E5%85%AB%E6%88%90" target="_blank"><img src="../Sources/img/Recognition/looop.png" alt="looop"></a>
+			</div>
+			
+			<div class="recognition-box">
+				<a href="https://hk.on.cc/hk/bkn/cnt/news/20190731/bkn-20190731124850842-0731_00822_001.html" target="_blank"><img src="../Sources/img/Recognition/oncc.png" alt="oncc"></a>
+			</div>
+			
+			<div class="recognition-box">
+				<a href="https://www.am730.com.hk/column/%E7%A7%91%E6%8A%80/ar-%e6%84%9b%e5%bf%83%e7%8e%a9%e5%85%b7%e8%ad%98%e5%88%a5%e5%ad%b8%e5%89%8d%e8%ae%80%e5%af%ab%e9%9a%9c%e7%a4%99%e5%ad%b8%e7%ab%a5-173925" target="_blank"><img src="../Sources/img/Recognition/am730.png" alt="am730"></a>
+			</div>
+			
+			<div class="recognition-box">
+				<a href="https://www.rthk.hk/radio/pth/programme/newpeople/episode/581731" target="_blank"><img src="../Sources/img/Recognition/rthk.png" alt="rthk"></a>
+			</div>
+			
+			<div class="recognition-box">
+				<a href="http://paper.wenweipo.com/2019/08/01/HK1908010037.htm" target="_blank"><img src="../Sources/img/Recognition/WenWeiPo.png" alt="WenWeiPo"></a>
+			</div>
+			
+			<div class="recognition-box">
+				<a href="https://std.stheadline.com/daily/article/2041792/%E6%97%A5%E5%A0%B1-%E6%95%99%E8%82%B2-%E5%85%A8%E5%9C%8B%E7%A7%91%E5%89%B5%E5%A4%A7%E8%B3%BD-%E6%B8%AF%E7%94%9F%E5%A5%AA%E9%80%BE60%E7%8D%8E" target="_blank"><img src="../Sources/img/Recognition/SingTaoDaily.png" alt="SingTaoDaily"></a>
+			</div>
+			
+			<div class="recognition-box">
+				<a href="https://hd.stheadline.com/news/daily/hk/784922/%E6%97%A5%E5%A0%B1-%E6%B8%AF%E8%81%9E-%E6%B8%AF%E4%BB%A3%E8%A1%A8%E6%8F%9A%E5%A8%81%E5%85%A8%E5%9C%8B%E7%A7%91%E5%89%B5%E8%B3%BD-%E5%8B%87%E5%A5%AA%E9%80%BE60%E7%8D%8E" target="_blank"><img src="../Sources/img/Recognition/HeadLineDaily.png" alt="HeadLineDaily"></a>
+			</div>
+			
+			<div class="recognition-box">
+				<a href="https://www.bastillepost.com/hongkong/article/4830970-%ef%bb%bf%e6%b8%af%e4%bb%a3%e8%a1%a8%e6%8f%9a%e5%a8%81%e5%85%a8%e5%9c%8b%e7%a7%91%e5%89%b5%e8%b3%bd%e3%80%80%e5%8b%87%e5%a5%aa%e9%80%be60%e7%8d%8e" target="_blank"><img src="../Sources/img/Recognition/BastillePost.png" alt="BastillePost"></a>
+			</div>
+			
+			<div class="recognition-box">
+				<a href="http://lionrockdaily.com/2019/08/01/10.pdf"  target="_blank"><img src="../Sources/img/Recognition/LionRockDaily.png" alt="LionRockDaily"></a>
+			</div>
+			
+			<div class="recognition-box">
+				<img src="../Sources/img/Recognition/HKCommercialDaily.png" alt="HKCommercialDaily">
+			</div>
+			
+			<div class="recognition-box">
+				<a href="https://www.youtube.com/watch?v=u9d_nJ56B9w&feature=youtu.be" target="_blank"><img src="../Sources/img/Recognition/tvb.png" alt="tvb"></a>
+			</div>
+
+			<div class="recognition-box">
+				<a href="https://cardnews.ardyslexiatoy.com/" target="_blank"><img src="../Sources/img/Recognition/CARDNews.png" alt="card-news"></a>
+			</div>
+
+			<div class="recognition-box">
+				<a href="https://www.eitp.gov.hk/en/showcase/2018/eitp-partner-school-students-won-the-certificate-of-merit-in-the-hong-kong-ict-awards-2019-student-innovation-award-caswcmc.php" target="_blank"><img src="../Sources/img/Recognition/EITP.png" alt="EITP"></a>
+			</div>
+
+			<div class="recognition-box">
+				<a href="https://topick.hket.com/article/2743251/%E3%80%90%E7%A7%91%E7%A0%94%E7%99%BC%E6%98%8E%E3%80%91%E4%B8%AD%E5%85%AD%E7%94%9F%E7%A0%94AR%E9%81%8A%E6%88%B2%E8%AD%98%E5%88%A5%E8%AE%80%E5%AF%AB%E9%9A%9C%E7%A4%99%E5%AD%B8%E7%AB%A5%E5%A5%AA%E5%86%A0%E3%80%80%E9%96%8B%E7%99%BC%E6%88%90%E6%9C%AC%E5%83%85%E7%B4%8420%E6%B8%AF%E5%85%83" target="_blank"><img src="../Sources/img/Recognition/TOPick.png" alt="TOPick"></a>
+			</div>
+
+			<div class="recognition-box">
+				<a href="https://metroeducationplus.com.hk/posts/STREAM%E6%95%99%E8%82%B2-%E7%A7%91%E5%AD%B8%E6%AF%94%E8%B3%BD-%E8%A7%A3%E6%B1%BA%E7%94%9F%E6%B4%BB%E6%8C%91%E6%88%B0/1" target="_blank"><img src="../Sources/img/Recognition/MetroEducationPlus.png" alt="MetroEducationPlus"></a>
+			</div>
+
+			<div class="recognition-box">
+				<a href="http://www.ecampustoday.com.hk/book-detail.php?id=3695" target="_blank"><img src="../Sources/img/Recognition/ecompustoday.jpg" alt="ecompustoday"></a>
+			</div>
+			
+<div class="recognition-box">
+				<a href="https://link.ardyslexiatoy.com/scmp" target="_blank"><img src="../Sources/img/Recognition/SCMPyp.png" alt="SCMP Young Post"></a>
+			</div>
+		</div>
+	</section>
+
+	<!--<center class="ads">
+	  <script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js"></script>
+	   CARD_06 
+	  <ins class="adsbygoogle"
+	       style="display:block"
+	       data-ad-client="ca-pub-6881562947845271"
+	       data-ad-slot="2765570113"
+	       data-ad-format="auto"
+	       data-full-width-responsive="true"></ins>
+	  <script>
+	       (adsbygoogle = window.adsbygoogle || []).push({});
+	  </script>
+	</center>-->
+	
+	<section class="video" id="video"><div class="header-box"></div>
+		<div data-aos="fade-up" class="content-title-container">
+			<h1>VIDEO INTRODUCTION</h1>
+			<hr>
+		</div>
+
+		<div class="video-carousel-container" data-aos="fade-up">
+			<div class="wrapper">
+				<div class="owl-carousel owl-theme">
+
+					<div class="item">
+						<div class="video-container">
+							<iframe width="800" height="450" src="https://www.youtube.com/embed/DRhilPB5ErI" frameborder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+						</div>
+					</div>
+					
+			    <div class="item">
+			    	<div class="video-container">
+							<iframe width="800" height="450" src="https://www.youtube.com/embed/u9d_nJ56B9w" frameborder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+						</div>
+					</div>
+
+			    <div class="item">
+			    	<div class="video-container">
+							<iframe width="800" height="450" src="https://www.youtube.com/embed/04AgwyM5vgs" frameborder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+						</div>
+					</div>
+
+					<div class="item">
+						<div class="video-container">
+							<iframe width="800" height="450" src="https://www.youtube.com/embed/e4Zgt9c4puU" frameborder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+						</div>
+					</div>
+
+					<div class="item">
+						<div class="video-container">
+							<iframe width="800" height="450" src="https://www.youtube.com/embed/UhbXbBlTSKo" frameborder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+						</div>
+					</div>
+				</div>
+							
+				<div class="control">
+					<div class="nav-control">
+						<span class="prev nav-btn"><i class="fas fa-angle-left"></i></span>
+						<span class="next nav-btn"><i class="fas fa-angle-right"></i></span>
+					</div>
+					<!-- <div class="auto-play-control">
+						<span class="auto-btn" onclick="AutoPlayController()"><i class="fas fa-pause-circle" id="play-pause-btn"></i></span>
+					</div> -->
+				</div>
+			</div>
+		</div>
+		
+		<!-- <div class="slider-container" data-aos="fade-up">
+			<div class="slider-wrapper">
+				<div class="slider">
+					<div class="video-slider--item"><div class="item-content-container">
+
+					<div class="video-slider--item"><div class="item-content-container">
+							<iframe width="800" height="450" src="https://www.youtube.com/embed/DRhilPB5ErI" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+					</div></div>
+
+						<div class="video-container">
+							<iframe width="800" height="450" src="https://www.youtube.com/embed/u9d_nJ56B9w" frameborder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+						</div>
+					</div></div>
+
+					<div class="video-slider--item"><div class="item-content-container">
+						<iframe width="800" height="450" src="https://www.youtube.com/embed/04AgwyM5vgs" frameborder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+					</div></div>
+					
+					<div class="video-slider--item"><div class="item-content-container">
+						<iframe width="800" height="450" src="https://www.youtube.com/embed/e4Zgt9c4puU" frameborder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+					</div></div>
+					
+					<div class="video-slider--item"><div class="item-content-container">
+						<iframe width="800" height="450" src="https://www.youtube.com/embed/UhbXbBlTSKo" frameborder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+					</div></div>
+					
+				</div>
+			</div>
+		</div> -->
+		
+<!--
+		<div data-aos="fade-up" class="video-container">
+			<iframe width="560" height="315" src="https://www.youtube.com/embed/u9d_nJ56B9w" frameborder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+		</div>
+-->
+		
+	</section>
+	
+<!--	<div class="space"></div> -->
+
+	<section class="invention-time-line" id="timeline"><div class="header-box"></div>
+		<div data-aos="fade-up" class="content-title-container">
+			<h1>INVENTION TIMELINE</h1>
+			<hr>
+		</div>
+
+		<div data-aos="fade-up" id="cd-timeline" class="cd-container">
+			<div class="cd-timeline-block">
+				<div class="cd-timeline-img">
+					<i class="fas fa-search time-line-icon"></i>
+				</div>
+
+				<div class="cd-timeline-content">
+					<h2>Background Research</h2>
+					<p>Find out the problem and set up the direction of our invention</p>
+					<span class="cd-date">Sep 2018</span>
+				</div> <!-- cd-timeline-content -->
+			</div> <!-- cd-timeline-block -->
+
+			<div class="cd-timeline-block">
+				<div class="cd-timeline-img">
+					<i class="fas fa-paint-brush time-line-icon"></i>
+				</div> <!-- cd-timeline-img -->
+
+				<div class="cd-timeline-content">
+					<h2>Idea Thinking</h2>
+					<p>Prototype sketching and interface design</p>
+					<span class="cd-date">Nov 2018</span>
+				</div> <!-- cd-timeline-content -->
+			</div> <!-- cd-timeline-block -->
+
+			<div class="cd-timeline-block">
+				<div class="cd-timeline-img">
+					<i class="fas fa-code time-line-icon"></i>
+				</div> <!-- cd-timeline-img -->
+
+				<div class="cd-timeline-content">
+					<h2>App Development</h2>
+					<p>Building game scenes and programming</p>
+					<span class="cd-date">Dec 2018</span>
+				</div> <!-- cd-timeline-content -->
+			</div> <!-- cd-timeline-block -->
+
+			<div class="cd-timeline-block">
+				<div class="cd-timeline-img">
+					<i class="fas fa-chart-pie time-line-icon"></i>
+				</div> <!-- cd-timeline-img -->
+
+				<div class="cd-timeline-content">
+					<h2>Program Testing</h2>
+					<p>Program testing and debugging</p>
+					<span class="cd-date">Feb 2019</span>
+				</div> <!-- cd-timeline-content -->
+			</div> <!-- cd-timeline-block -->
+
+			<div class="cd-timeline-block">
+				<div class="cd-timeline-img">
+					<i class="fas fa-tools time-line-icon"></i>
+				</div> 
+
+				<div class="cd-timeline-content">
+					<h2>Software Improvements</h2>
+					<p>Develop a login system for account management and data storage</p>
+					<span class="cd-date">Mar 2019</span>
+				</div> <!-- cd-timeline-content -->
+			</div> <!-- cd-timeline-block -->
+
+			<div class="cd-timeline-block">
+				<div class="cd-timeline-img">
+					<i class="fas fa-child time-line-icon"></i>
+				</div> 
+
+				<div class="cd-timeline-content">
+					<h2>Experimental Research on Invention</h2>
+					<p>Experiment on the effectiveness of inventions in identifying Dyslexic students</p>
+					<span class="cd-date">Apr 2019</span>
+				</div> <!-- cd-timeline-content -->
+			</div> <!-- cd-timeline-block -->
+		</div> <!-- cd-timeline -->
+	</section>
+	
+	<footer class="footer">  
+		<div class="footer-social-media"> 
+			<!-- Add icon library -->
+
+			<!-- Add font awesome icons -->
+			<a href="https://www.facebook.com/AR-愛心玩具識別學前讀寫障礙學童-2162670473802255/?modal=admin_todo_tour" target="_blank"><i class="fa fa-facebook social-media-icon" id="facebook-icon"></i></a>
+			<a href="https://www.instagram.com/ar_dyslexia_toy/" target="_blank"><i class="fab fa-instagram social-media-icon" id="instragram-icon"></i></a>
+			<a href="https://www.youtube.com/channel/UCMRipUGgG48_RuDIIQr8EGA" target="_blank"><i class="fa fa-youtube social-media-icon" id="youtube-icon"></i></a>
+		</div>
+		
+		<div class="footer-inner-links">
+			<ul>
+				<li><a href="#">Main</a></li>
+				<li><a href="#latest-news">Latest News</a></li>
+				<li><a href="#idea">Idea Of Invention</a></li>
+				<li><a href="#feature">Invention Feature</a></li>
+				<li><a href="#work-flow">Invention WorkFlow</a></li>
+				<li><a href="#report">Analysis Report</a></li>
+				<li><a href="#awards">Awards</a></li>
+				<li><a href="#recognition">Recognition</a></li>
+				<li><a href="#video">Video Introduction</a></li>
+				<li><a href="#timeline">INVENTION TIMELINE</a></li>
+			</ul>
+		</div>
+		
+		<p class="footer-copyright">Copyright © 2020 All rights reserved - C.A.R.D.</p>
+		
+		<div class="bottom">
+			<!-- hitwebcounter Code START -->
+			<a class="counter" target="_blank">You are the 
+			<img src="https://hitwebcounter.com/counter/counter.php?page=7536492&style=0005&nbdigits=5&type=page&initCount=6685" title="Web Counter" Alt="counter free"   border="0" width="80px"> visitor in our web.
+			</a>
+
+			<div id="google_translate_element"></div>
+			<script type="text/javascript">
+			function googleTranslateElementInit() {
+			  new google.translate.TranslateElement({pageLanguage: 'en'}, 'google_translate_element');
+			}
+			</script>
+
+			<script type="text/javascript" src="//translate.google.com/translate_a/element.js?cb=googleTranslateElementInit"></script>
+		</div>
+	</footer>
+
+	<div class="popup-div" id="subscribe-popup">
+		<div class="popup-container">
+			<p id="popup-content">Let's subscribe our web to get the latest news of us and access to the C.A.R.D. News!</p>
+			
+			<div class="popup-btn">
+				<button onclick="PopupSubscribe()" id="subscribe"></button>
+				<button onclick="ContinueToWeb()" id="continue-to-web">Continue To Web</button>
+			</div>
+			
+			<i class="fas fa-times cancel" onclick="ClosePopup()"></i>
+		</div>
+	</div>
+	
+	<!--language-seletor-->
+	<div class="lang">
+		<div class="lang-container">
+			<ul>
+				<li><a href="../index.html" id="redirect-lang" onclick="RedirectLang()">中文(繁體)</a></li>
+				<li><a href="index.html">English</a></li>
+			</ul>
+			
+			<i class="fas fa-times lang-cancel" onclick="CloseLang()"></i>
+		</div>
+	</div>
+
+	<!-- script -->
+	<!--Animation on scroll script-->
+	<script>
+		AOS.init({
+			duration: 1000,
+		});
+	</script>
+
+	<!-- Global site tag (gtag.js) - Google Analytics -->
+	<script async src="https://www.googletagmanager.com/gtag/js?id=UA-147386646-1"></script>
+	<script>
+	  window.dataLayer = window.dataLayer || [];
+	  function gtag(){dataLayer.push(arguments);}
+	  gtag('js', new Date());
+
+	  gtag('config', 'UA-147386646-1');
+	</script>
+	
+	<!--Parallax scrolling-->
+	<script>
+      var rellax = new Rellax('.rellax');
+  </script>
+
+  <!-- additional copy -->
+	<script language="javascript" type="text/javascript">
+	jQuery(document).on('copy', function(e)
+		{
+		  var selected = window.getSelection();
+		  var selectedText = selected.toString().replace(/\n/g, '<br>');  // Solve the line breaks conversion issue
+		  var copyFooter = '<br><br>Information by C.A.R.D. <br>'
+		  									+ 'www.ardyslexiatoy.com/en';
+		  var copyHolder = $('<div>', {id: 'temp', html: selectedText + copyFooter, style: {position: 'absolute', left: '-99999px'}});
+		    
+		  $('body').append(copyHolder);
+		  selected.selectAllChildren( copyHolder[0] );
+		  window.setTimeout(function() {
+		      copyHolder.remove();
+		  },0);
+		});
+	</script>
+
+	<script src="../js/owl_carousel_setup.js"></script>
+	<script src="../Library/OwlCarousel2-2.3.4/dist/owl.carousel.min.js"></script>
+	<script src="../js/navbar.js"></script>
+	<script src="../js/firebase.js"></script>
+	<script src="../js/lang.js"></script>
+  <script src="../js/BackToTop.js"></script>
+  <script src="../js/AnchorLink.js"></script>
+  <script src="../js/HamburgerIconAnim.js"></script>
+</body>
+</html>

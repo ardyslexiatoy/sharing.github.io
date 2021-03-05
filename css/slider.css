@@ -1,0 +1,210 @@
+.slider-container {
+	width: 70%;
+}
+
+.slider-wraper {
+	width: 100%;
+	height: 100%;
+}
+
+.slider--item {
+	width: 100vw;
+	background-repeat: no-repeat;
+	background-size: cover;
+	display: flex;
+	justify-content: center;
+	align-items: center;
+}
+
+.item-content-container {
+/*	background: #04e06f;*/
+	width: 100%;
+	height: 100%;
+	display: flex;
+	justify-content: center;
+	align-items: center;
+}
+
+.slick-slide {
+	position: relative;
+	outline: none;
+	z-index: 1;
+}
+.slick-slide.slick-current {
+	z-index: 2;	
+}
+
+.slick-arrow {
+	position: absolute;
+	width: 100px;
+	top: 0;
+	height: 100%;
+	border: none;
+	outline: none;
+	background-color: rgba(255, 255, 255, 0);
+	text-indent: -9999px;
+	z-index: 999;
+	cursor: pointer;
+}
+
+.slick-arrow:hover {
+	opacity: .7;
+}
+
+.slick-arrow:before {
+	content: "";
+	position: absolute;
+	display: block;
+	width: 20px; /* arrow size */
+	height: 20px; /* arrow size */
+	top: 50%;
+	margin-top: -21px;
+	-webkit-transition: all, 0.3s, cubic-bezier(0.55, 0, 0.1, 1) 1s ease-in-out;
+	-khtml-transition: all, 0.3s, cubic-bezier(0.55, 0, 0.1, 1) 1s ease-in-out;
+	-moz-transition: all, 0.3s, cubic-bezier(0.55, 0, 0.1, 1) 1s ease-in-out;
+	-ms-transition: all, 0.3s, cubic-bezier(0.55, 0, 0.1, 1) 1s ease-in-out;
+	-o-transition: all, 0.3s, cubic-bezier(0.55, 0, 0.1, 1) 1s ease-in-out;
+	transition: all, 0.3s, cubic-bezier(0.55, 0, 0.1, 1) 1s ease-in-out;
+}
+
+.slick-arrow:after {
+	content: "";
+	position: absolute;
+	display: block;
+	height: 2px;
+	width: 160px;
+	top: 50%;
+	background-color: white;
+	-webkit-transition: all, 0.4s 0.1s, cubic-bezier(0.55, 0, 0.1, 1) 1s ease-in-out;
+	-khtml-transition: all, 0.4s 0.1s, cubic-bezier(0.55, 0, 0.1, 1) 1s ease-in-out;
+	-moz-transition: all, 0.4s 0.1s, cubic-bezier(0.55, 0, 0.1, 1) 1s ease-in-out;
+	-ms-transition: all, 0.4s 0.1s, cubic-bezier(0.55, 0, 0.1, 1) 1s ease-in-out;
+	-o-transition: all, 0.4s 0.1s, cubic-bezier(0.55, 0, 0.1, 1) 1s ease-in-out;
+	transition: all, 0.4s 0.1s, cubic-bezier(0.55, 0, 0.1, 1) 1s ease-in-out;
+	opacity: 0;
+}
+
+.slick-arrow.slick-prev {
+	left: 0;
+}
+
+.slick-arrow.slick-prev:before {
+	border-top: 10px solid #888888; /* thickness of arrow */
+	border-left: 10px solid #888888; /* thickness of arrow */
+	left: 50px;
+	-webkit-transform: rotate(-45deg);
+	-khtml-transform: rotate(-45deg);
+	-moz-transform: rotate(-45deg);
+	-ms-transform: rotate(-45deg);
+	-o-transform: rotate(-45deg);
+	transform: rotate(-45deg);
+}
+
+/*
+.slick-arrow.slick-prev:before:hover {
+	border-top: 10px solid #333333; 
+	border-left: 10px solid #333333; 
+}
+*/
+
+.slick-arrow.slick-prev:after {
+	left: 300px;
+}
+
+/*
+.slick-arrow.slick-prev:hover:before {
+	left: 120px;
+}
+.slick-arrow.slick-prev:hover:after {
+	left: 113px;
+	opacity: 1;
+	width: 80px;
+}
+*/
+
+.slick-arrow.slick-next {
+	right: 0;
+}
+
+.slick-arrow.slick-next:before {
+	border-bottom: 10px solid #888888; /* thickness of arrow */
+	border-right: 10px solid #888888; /* thickness of arrow */
+	right: 50px;
+	-webkit-transform: rotate(-45deg);
+	-khtml-transform: rotate(-45deg);
+	-moz-transform: rotate(-45deg);
+	-ms-transform: rotate(-45deg);
+	-o-transform: rotate(-45deg);
+	transform: rotate(-45deg);
+}
+
+/*
+.slick-arrow.slick-next:before:hover {
+	border-top: 10px solid #333333; 
+	border-right: 10px solid #333333; 
+}
+*/
+
+.slick-arrow.slick-next:after {
+	right: 300px;
+}
+
+/*
+.slick-arrow.slick-next:hover:before {
+	right: 120px;
+}
+.slick-arrow.slick-next:hover:after {
+	right: 113px;
+	opacity: 1;
+	width: 80px;
+}
+*/
+
+.slick-dots {
+	padding: 0;
+	margin: 0;
+	width: 100%;
+	position: absolute;
+	bottom: 30px;
+	text-align: center;
+}
+
+.slick-dots li {
+	display: inline-block;
+	vertical-align: middle;
+	margin: 0 6px;
+}
+
+.slick-dots li.slick-active button {
+	background-color: #888888;
+	height: 14px;
+	width: 14px;
+}
+
+.slick-dots li.slick-active button:hover {
+	background-color: #333333;
+}
+
+.slick-dots li button {
+	outline: none;
+	display: block;
+	width: 18px;
+	height: 18px;
+	border: 1px solid #888888;
+	background-color: rgba(255, 255, 255, 0);
+	text-indent: -9999px;
+	border-radius: 100%;
+	cursor: pointer;
+	-webkit-transition: all, 0.2s, ease-in 1s ease-in-out;
+	-khtml-transition: all, 0.2s, ease-in 1s ease-in-out;
+	-moz-transition: all, 0.2s, ease-in 1s ease-in-out;
+	-ms-transition: all, 0.2s, ease-in 1s ease-in-out;
+	-o-transition: all, 0.2s, ease-in 1s ease-in-out;
+	transition: all, 0.2s, ease-in 1s ease-in-out;
+}
+
+.slick-dots li button:hover {
+	background-color: #333333;
+}
+
+@media screen and (max-width: 600px)
