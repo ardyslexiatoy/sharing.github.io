@@ -1,0 +1,856 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="utf-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+	<meta name="description" content="The invention aims to achieve the early diagnosis of Dyslexia to 4 – 8 years old children, which can be widely adopted on mobile devices, through a gamified and interactive manner. The early identification of Dyslexia can improve the effectiveness of the treatment. We applied 3D printing, Augmented reality and gamification to prepare our testing materials and digital solution. With the capability of early identification, parents and school can help for their children during the prime time.">
+	<meta name="keywords" content="讀寫障礙, AR, AR game, SEN, caswcmc, 宣道會陳朱素華紀念中學, 黃諾謙, 張才進, 方家豪">
+	<title>C.A.R.D. | Sharing</title>
+	<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+	<link rel="stylesheet" href="Library/fontawesome/css/all.css">
+	<link rel="stylesheet" href="Library/aos/aos.css">
+	<link href="https://fonts.googleapis.com/css?family=Bungee+Hairline|Open+Sans" rel="stylesheet">
+	<link rel="icon" href="https://cdn-cms.f-static.net/uploads/2196940/normal_5def16022d258.png">
+	<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
+	<script src="https://use.fontawesome.com/4d74086fc6.js"></script>
+	<script src="Library/aos/aos.js"></script>
+	<script src="Library/Rellax Parallax Scrolling/rellax.min.js"></script>
+	<!-- The core Firebase JS SDK is always required and must be listed first -->
+	<script src="https://www.gstatic.com/firebasejs/7.12.0/firebase-app.js"></script>
+	<script src="https://www.gstatic.com/firebasejs/7.12.0/firebase-auth.js"></script>
+	<script src="https://www.gstatic.com/firebasejs/7.12.0/firebase-database.js"></script>
+	<!--slider-->
+	<!--	<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/normalize/5.0.0/normalize.min.css">-->
+	<link rel='stylesheet prefetch' href='http://cdn.jsdelivr.net/jquery.slick/1.5.9/slick.css'>
+	<link rel='stylesheet prefetch' href='http://cdn.jsdelivr.net/jquery.slick/1.5.9/slick.css'>
+	<link rel="stylesheet" href="css/slider.css">
+	<script src='http://cdnjs.cloudflare.com/ajax/libs/jquery/2.1.3/jquery.min.js'></script>
+	<script src='http://cdn.jsdelivr.net/jquery.slick/1.5.9/slick.min.js'></script>
+	<script src='https://cdnjs.cloudflare.com/ajax/libs/gsap/1.18.2/TweenMax.min.js'></script>
+	<!-- owl carousel -->
+	<link rel="stylesheet" href="Library/OwlCarousel2-2.3.4/dist/assets/owl.carousel.min.css">
+	<link rel="stylesheet" href="Library/OwlCarousel2-2.3.4/dist/assets/owl.theme.default.min.css">
+	<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
+	<script src="Library/OwlCarousel2-2.3.4/dist/owl.carousel.min.js"></script>
+	<!--custom style-->
+	<link rel="stylesheet" href="css/user.css">
+	<link rel="stylesheet" href="css/lang.css">
+	<link rel="stylesheet" href="css/time_line.css">
+	<link rel="stylesheet" href="css/style.css">
+	<link rel="stylesheet" href="css/header.css">
+	<!-- <link rel="stylesheet" href="css/accordion.css"> -->
+	<link rel="stylesheet" href="css/owl_carousel.css">
+
+	<!-- OneSignal Push Notification-->
+	<script src="https://cdn.onesignal.com/sdks/OneSignalSDK.js" async=""></script>
+	<script>
+ 		 window.OneSignal = window.OneSignal || [];
+ 		 OneSignal.push(function() {
+   		 OneSignal.init({
+      appId: "f0eb421c-e7be-4753-8c7d-74fd64e5220a",
+  	  });
+ 	 });
+	</script>
+</head>
+
+<body id="body">
+
+	<!-- Back to top button -->
+	<a class="scroll-top">
+		<span id="scroll-back-btn"><i class="fas fa-chevron-up"></i></span>
+	</a>
+
+	<!--navbar-->
+	<header>
+			<div>
+				<a href="index.html"><img src="Sources/img/WebLogo.png" alt="Web logo"></a>
+				<a href="index.html"><h1>C.A.R.D. - AR 愛心玩具識別學前讀寫障礙學童</h1></a>
+			</div>
+			
+			<input type="checkbox" id="sub-menu-toggle">
+			<label for="sub-menu-toggle">
+	      <div class="nav-icon3-container">
+	        <div id="nav-icon3">
+	          <span></span>
+	          <span></span>
+	          <span></span>
+	          <span></span>
+	        </div>
+	      </div>
+			</label>
+		
+			<ul>
+				<li><a href="#main">主頁</a></li>
+				<li><a href="#idea">作品構思</a></li>
+				<!-- <li><a href="#latest-news">最新消息</a></li> -->
+				<li><a href="#" class="drop-down">更多<i class="fas fa-caret-down" id="dropdown-icon"></i></a>
+					<ul>
+						<li><a href="#idea">作品構思</a></li>
+						<li><a href="#feature">作品特點</a></li>
+						<li><a href="#work-flow">發明品運作流程</a></li>
+						<li><a href="#report">分析報告</a></li>
+						<li><a href="#firebase">實時數據庫</a></li>
+						<li><a href="#advantage">發明品優點</a></li>
+						<li><a href="#difficult">研發困難</a></li>
+						<li><a href="#qrcode">更多資訊</a></li>
+						<li><a href="https://www.ardyslexiatoy.com">發明品網頁</a></li>
+						<!-- <li><a href="#awards">相關獎項</a></li>
+						<li><a href="#recognition">傳媒報導</a></li>
+						<li><a href="#video">介紹影片</a></li>
+						<li><a href="#timeline">作品歷程</a></li>
+						<li><a href="#" onclick="GotoBlog()"  >C.A.R.D. 科技情報</a></li>
+						<li><a href="https://store.ardyslexiatoy.com" target="_blank">商店Beta</a></li> -->
+					</ul>
+				</li>
+				
+				<!-- <li><a id="lang-selector" onclick="OpenLang()"  ><i class="fas fa-globe-europe" id="language-icon"></i></a></li>
+				<li id="user-acc"><a href="#" class="drop-down"><i class="fas fa-user" id="user-icon"></i></a>
+					<ul class="acc-drop-down-menu">
+						<li><a href="#" id="acc-manager" onclick="UserAccEvent()"></a></li>
+					</ul>
+				</li> -->
+			</ul>
+	</header> 
+
+	<!-- Waring Msg -->
+	
+		<!-- <div class="alert warning" id="warning">
+		  <span class="closebtn">&times;</span> 
+		  <strong>訊息！</strong> 由於提供線上客服功能的服務供應商的語言設定問題，部份用户在使用期間可能出現亂碼，如需繼續查詢請電郵至 <a href="mailto:information@ardyslexiatoy.com" style="color:white">information@ardyslexiatoy.com</a>
+		</div>
+	
+	<script>
+	var close = document.getElementsByClassName("closebtn");
+	var i;
+
+	for (i = 0; i < close.length; i++) {
+	  close[i].onclick = function(){
+	    var div = this.parentElement; 
+	    div.style.opacity = "0";
+	    setTimeout(function(){ div.style.display = "none"; }, 600);
+	  }
+	}
+	</script> -->
+	
+	<div class="header-box" id="main"></div>
+	
+	<section class="main rellax" data-rellax-speed="-8">
+<!--		<img src="Sources/img/MainBackground.jpg" alt="Background holder" class="background-holder">-->
+	
+		<div class="main-container">
+			<div class="main-content rellax" data-rellax-speed="3">
+				<h1>C.A.R.D. - AR 愛心玩具識別學前讀寫障礙學童</h1>
+
+				<p>為及早識別讀寫障礙學童而設的配套</p>
+			</div>
+		</div>
+	</section>
+	
+	<!-- <section class="latest-news" id="latest-news"><div class="header-box"></div>
+	
+		<div class="content-title-container">
+			<h1>最新消息</h1>
+			<hr>
+		</div>
+
+		<div class="latest-news-carousel-container" data-aos="fade-up">
+			<div class="wrapper">
+				<div class="owl-carousel owl-theme">
+					<div class="item">
+			    	<div class="latest-news-content-container">
+							<img src="Sources/img/Awards/HKSSPC2020.jpg" alt="HKSSPC">
+
+							<p>團隊榮獲 二零二零年香港學生科學比賽 - 高中組發明品(A類項目) 冠軍 <br>
+							感謝各位支持!
+						</div>
+					</div>
+			    <div class="item">
+			    	<div class="latest-news-content-container">
+							<a href="#" onclick="GotoBlog()"><img src="Sources/img/WebLogo.png" alt="Web Logo"></a>
+
+							<p>團隊開設了一個討論區定時分享最新科技資訊，歡迎大家踴躍支持，訂閱我們以進入討論區</p>
+						</div>
+					</div>
+				</div>
+							
+				<div class="control">
+					<div class="nav-control">
+						<span class="prev nav-btn"><i class="fas fa-angle-left"></i></span>
+						<span class="next nav-btn"><i class="fas fa-angle-right"></i></span>
+					</div>
+				</div>
+			</div>
+		</div>
+	</section> -->
+
+	<!--<center class="ads">
+	  <script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js"></script>
+	   CARD_01 
+	  <ins class="adsbygoogle"
+	      style="display:block"
+	      data-ad-client="ca-pub-6881562947845271"
+	      data-ad-slot="2775332495"
+	      data-ad-format="auto"
+	      data-full-width-responsive="true"></ins>
+	  <script>
+	      (adsbygoogle = window.adsbygoogle || []).push({});
+	  </script>
+	</center>-->
+	
+	<section class="idea" id="idea"><div class="header-box"></div>
+		<div data-aos="fade-up" class="content-title-container">
+			<h1>作品構思</h1>
+			<hr>
+		</div>
+		
+		<p data-aos="fade-up">本發明品希望解決現時香港讀寫障礙學童普遍較遲才被發現出有讀寫障礙，導致他們未能把握黃金治療時間的問題。本發明品針對K2至小二學童使用，透過AR手機應用程式、圖片識別技術、並配合3D列印技術製作出的立體玩具進行測試，以獨立於文字的手機應用程式，及早識別讀寫障礙潛在個案。發明品配合AR技術以增加其互動性及趣味性。家長及學校可參考其測試結果，儘早為子女及學生進行規劃，把握治療的黃金時間，增加他們治療的成效。</p>
+	</section>
+	
+	<section class="feature" id="feature"><div class="header-box"></div>
+		<div data-aos="fade-up" class="content-title-container">
+			<h1>作品特點</h1>
+			<hr>
+		</div>
+		
+		<div data-aos="fade-up" class="feature-content-container">
+			<p> <strong>利用AR技術配合遊戲化學習：</strong> <br> 在家中，我們透過簡單的測試配套讓學童可輕鬆在家中利用手機應用程式愉快學習。而不同的AR玩具更可訓練學前學童分辦「相同」及「不相同」的能力，如顏色、形狀等。</p>
+			<p> <strong>以獨立於文字的方式作學前檢測：</strong> <br> 對比起坊間的手機應用程式，我們主要以圖形及圖案製作識別配套，希望能儘早識別學前學童的讀寫障礙潛在個案，避免他們因為對文字欠缺認知而被忽略。</p>
+			<p> <strong>結合人工智慧監測學童學習情況(未來發展)：</strong> <br> 當學童在手機應用程式上使用測試配套時，手機上的前置鏡頭配合人工智慧技術對學童的臉部表情及專注程度進行識別，以便跟進學童在識別過程中的學習情況。</p>
+		</div>
+	</section>
+
+	<!--<center class="ads">
+	  <script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js"></script>
+	   CARD_03 
+	  <ins class="adsbygoogle"
+	       style="display:block"
+	       data-ad-client="ca-pub-6881562947845271"
+	       data-ad-slot="8732212663"
+	       data-ad-format="auto"
+	       data-full-width-responsive="true"></ins>
+	  <script>
+	       (adsbygoogle = window.adsbygoogle || []).push({});
+	  </script>
+	</center>-->
+	
+	<section class="work-flow" id="work-flow"><div class="header-box"></div>
+		<div data-aos="fade-up" class="content-title-container">
+			<h1>發明品運作流程</h1>
+			<hr>
+		</div>
+		
+		<div data-aos="fade-up" class="work-flow-content-container">
+			<div class="flow-odd-container">
+				<img src="Sources/img/WorkFlow1.jpg" alt="WorkFlow1">
+				
+				<p>1. 家長陪同學童開啟APP內置的AR應用功能</p>
+			</div>
+			
+			<div class="flow-even-container">
+				<img src="Sources/img/WorkFlow2.jpg" alt="WorkFlow2">
+				
+				<p>2. 利用相機掃描角色上的識別圖案</p>
+			</div>
+			
+			<div class="flow-odd-container">
+				<img src="Sources/img/WorkFlow3.jpg" alt="WorkFlow3">
+				
+				<p>3. 手機程式上就會出現一個迷宮場境</p>
+			</div>
+			
+			<div class="flow-even-container">
+				<img src="Sources/img/WorkFlow4.jpg" alt="WorkFlow4">
+				
+				<p>4. 進行三關後會進入下一個難度的遊戲</p>
+			</div>
+		</div>
+	</section>
+	
+	<section class="report" id="report"><div class="header-box"></div>
+		<div data-aos="fade-up" class="content-title-container">
+			<h1>分析報告</h1>
+			<hr>
+		</div>
+		
+		<div data-aos="fade-up" class="report-content-container">
+			<div class="report-img-container">
+				<img src="Sources/img/Bad.jpg" alt="ScoreLow" class="report-img">
+				<img src="Sources/img/Good.jpg" alt="ScoreHigh" class="report-img">
+			</div>
+			
+			<p>如果學童取得較低分數即代表學童傾向讀寫障礙機會較大，建議尋找專家協助。 <br>如果學童取得較高分數即代表學童傾向讀寫障礙機會較少。</p>
+		</div>
+	</section>
+
+	<section class="firebase" id="firebase">
+		<div class="header-box"></div>
+		<div data-aos="fade-up" class="content-title-container">
+			<h1>實時數據庫</h1>
+			<hr>
+		</div>
+
+		<div class="firebase-content-container">
+			<img src="Sources/img/sharing/DB3322.png" alt="firebase" class="firebase-img" width="100%">
+		</div>
+		
+	</section>
+
+
+	<section class="advantage" id="advantage">
+		<div class="header-box"></div>
+		<div data-aos="fade-up" class="content-title-container">
+			<h1>發明品優點</h1>
+			<hr>
+		</div>
+
+		<div class="advantage-content-container">
+			<img src="Sources/img/sharing/Advantages_new.png" alt="Advantages" class="advantage-img" width="100%">
+		</div>
+		
+	</section>
+
+	<section class="difficult" id="difficult">
+		<div class="header-box"></div>
+		<div data-aos="fade-up" class="content-title-container">
+			<h1>研發困難</h1>
+			<hr>
+		</div>
+
+		<div class="difficult-content-container">
+			<img src="Sources/img/sharing/YYtest1.jpeg" alt="yytest" class="yytest-img" width="50%">
+			<img src="Sources/img/sharing/YYtest2.jpeg" alt="yytest" class="yytest-img" width="50%">
+		</div>
+		
+	</section>
+
+	<section class="qrcode" id="qrcode">
+		<div class="header-box"></div>
+		<div data-aos="fade-up" class="content-title-container">
+			<h1>更多資訊</h1>
+			<hr>
+		</div>
+
+		<div class="qrcode-content-container">
+			<div class="qrcode-container">
+				<img src="Sources/img/sharing/web.jpeg" alt="web" width="100%">
+				<p>發明品網頁</p>
+			</div>
+			<div class="qrcode-container">
+				<img src="Sources/img/sharing/yt.jpeg" alt="yt" width="100%">
+				<p>YouTube</p>
+			</div>
+			<div class="qrcode-container">
+				<img src="Sources/img/sharing/fb.jpeg" alt="fb" width="100%">
+				<p>Facebook</p>
+			</div>
+			<div class="qrcode-container">
+				<img src="Sources/img/sharing/ig.jpeg" alt="ig" width="100%">
+				<p>Instagram</p>
+			</div>
+
+		</div>
+		
+	</section>
+
+	<!--<center class="ads">
+	  <script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js"></script>
+	   CARD_04 
+	  <ins class="adsbygoogle"
+	       style="display:block"
+	       data-ad-client="ca-pub-6881562947845271"
+	       data-ad-slot="7883640204"
+	       data-ad-format="auto"
+	       data-full-width-responsive="true"></ins>
+	  <script>
+	       (adsbygoogle = window.adsbygoogle || []).push({});
+	  </script>
+	</center>-->
+	
+	<!-- <section class="awards" id="awards"><div class="header-box"></div>
+		<div data-aos="fade-up" class="content-title-container">
+			<h1>相關獎項</h1>
+			<hr>
+		</div>
+		
+		<div data-aos="fade-up" class="awards-content-container">
+
+			<div class="awards-cell-container">
+				<div class="img-cropper">
+					<img src="Sources/img/Awards/APICTA.jpg" alt="APICTA">
+				</div>	
+				<h3>2019亞太資訊及通訊科技大獎賽</h3>
+				<p>高中組優異獎</p>
+			</div>
+
+			<div class="awards-cell-container">
+				<div class="img-cropper">
+					<img src="Sources/img/Awards/CASTIC_1.JPG" alt="CASTIC_1" id="img-adj-CASTIC-1">
+				</div>	
+				<h3>第34屆全國青少年科技創新大賽</h3>
+				<p>青少年創新專案 一等獎  (計算器科學)</p>
+			</div>
+			
+			<div class="awards-cell-container">
+				<div class="img-cropper">
+					<img src="Sources/img/Awards/CASTIC_2.JPG" alt="CASTIC_2" id="img-adj-CASTIC-2">
+				</div>	
+				<h3>第34屆全國青少年科技創新大賽</h3>
+				<p>澳門電訊數碼澳門專項獎</p>
+			</div>
+			
+			<div class="awards-cell-container">
+				<div class="img-cropper">
+					<img src="Sources/img/Awards/CASTIC_3.JPG" alt="CASTIC_3">
+				</div>	
+				<h3>第34屆全國青少年科技創新大賽</h3>
+				<p>工銀澳門科研創新專項獎</p>
+			</div>
+			
+			<div class="awards-cell-container">
+				<div class="img-cropper">
+					<img src="Sources/img/Awards/HKICTA.jpg" alt="HKICTA">
+				</div>
+				
+				<h3>2019香港資訊及通訊科技獎</h3>
+				<p>學生創新獎 銅獎（中學組）</p>
+			</div>
+
+			<div class="awards-cell-container">
+				<div class="img-cropper">
+					<img src="Sources/img/Awards/HKSSPC2020.jpg" alt="HKSSPC" id="img-adj-hksspc">
+				</div>
+				
+				<h3>二零二零年香港學生科學比賽</h3>
+				<p>高中組發明品(A類項目) 冠軍</p>
+			</div>
+
+			<div class="awards-cell-container">
+				<div class="img-cropper">
+					<img src="Sources/img/Awards/STEMExcellence.jpg" alt="STEMExcellence" id="img-adj-stem-exc">
+				</div>
+				
+				<h3>2020年大灣區 STEM 卓越獎</h3>
+				<p>高中組金奬</p>
+			</div>
+			
+			<div class="awards-cell-container">
+				<div class="img-cropper">
+					<img src="Sources/img/Awards/21st_1.JPG" alt="21st_1">
+				</div>	
+				<h3>第21屆香港青少年科技創新大賽</h3>
+				<p> 電腦及資訊科技(高中組) 一等獎</p>
+			</div>
+			
+			<div class="awards-cell-container">
+				<div class="img-cropper">
+					<img src="Sources/img/Awards/21st_2.JPG" alt="21st_2" id="img-adj-21st-bull-b-tech">
+				</div>	
+				<h3>第21屆香港青少年科技創新大賽</h3>
+				<p>Bull.B Tech專項獎(高中組）</p>
+			</div>
+			
+			<div class="awards-cell-container">
+				<div class="img-cropper">
+					<img src="Sources/img/Awards/21st_3.JPG" alt="21st_3">
+				</div>	
+				<h3>第21屆香港青少年科技創新大賽</h3>
+				<p>英特爾國際科學與工程大獎賽地區附屬獎   英特爾傑出電腦科學特別獎</p>
+			</div>
+			
+			<div class="awards-cell-container">
+				<div class="img-cropper">
+					<img src="Sources/img/Awards/Samsung.JPG" alt="Samsung">
+				</div>	
+				<h3>Samsung Solve for Tomorrow 2018</h3>
+				<p>中學組亞軍</p>
+			</div>
+
+			<div class="awards-cell-container">
+				<div class="img-cropper">
+					<img src="Sources/img/Awards/TheGreaterBay2019.png" alt="TheGreaterBay2019">
+				</div>	
+				<h3>2019前海粵港澳青年創新創業大賽香港賽區</h3>
+				<p>高中組優異獎</p>
+			</div>
+
+			<div class="awards-cell-container">
+				<div class="img-cropper">
+					<img src="Sources/img/Awards/SmartCity.JPG" alt="SmartCity">
+				</div>	
+				<h3>智慧城市專題研習計畫 2018/19</h3>
+				<p>優秀智慧城市專題研習獎</p>
+			</div>
+
+			<div class="awards-cell-container">
+				<div class="img-cropper">
+					<img src="Sources/img/Awards/Engineer.png" alt="Engineer" id="img-adj-engineer">
+				</div>
+				
+				<h3>第二屆未來工程師大賽</h3>
+				<p>高中組優秀獎</p>
+			</div>
+
+			<div class="awards-cell-container">
+				<div class="img-cropper">
+					<img src="Sources/img/Awards/LST.jpg" alt="LST">
+				</div>	
+				<h3>第一屆「關懷弱勢社群—全港創新科技設計大賽」</h3>
+				<p>特別嘉許獎</p>
+			</div>
+			
+			<div class="awards-cell-container">
+				<div class="img-cropper">
+					<img src="Sources/img/Awards/LST.jpg" alt="LST">
+				</div>	
+				<h3>第一屆「關懷弱勢社群—全港創新科技設計大賽」</h3>
+				<p>優秀功能及介面設計獎</p>
+			</div>	
+		</div>
+	</section> -->	
+
+	<!-- <center class="ads">
+	  <script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js"></script>
+	  CARD_05
+	  <ins class="adsbygoogle"
+	       style="display:block"
+	       data-ad-client="ca-pub-6881562947845271"
+	       data-ad-slot="6570558536"
+	       data-ad-format="auto"
+	       data-full-width-responsive="true"></ins>
+	  <script>
+	       (adsbygoogle = window.adsbygoogle || []).push({});
+	  </script>
+	</center> -->
+	
+	<!-- <button class="accordion">傳媒報導</button> -->
+	<!-- <section class="recognition panel" id="recognition"><div class="header-box"></div>
+		<div data-aos="fade-up" class="content-title-container">
+			<h1>傳媒報導</h1>
+			<hr>
+		</div>
+		
+		<div data-aos="fade-up" class="recognition-content-container">
+			<div class="recognition-box">
+				<a href="https://www.pcmarket.com.hk/2019/09/04/stem%E5%AD%95%E8%82%B2%E6%88%90%E6%9E%9C%E3%80%80%E4%B8%AD%E5%AD%B8%E7%94%9F%E5%8A%A9sen%E8%A8%AD%E8%A8%88/amp/" target="_blank"><img src="Sources/img/Recognition/pcm.png" alt="pcm"></a>
+			</div>
+			
+			<div class="recognition-box">
+				<a href="https://ezone.ulifestyle.com.hk/article/2342750/%E5%B1%95%E7%A4%BA%E5%AD%B8%E7%94%9F%E5%89%B5%E7%A7%91%E5%8D%93%E8%B6%8A%E6%88%90%E5%B0%B1%E4%BB%A5%E5%89%B5%E7%A7%91%E6%8A%80%E8%A1%93%E5%8D%94%E5%8A%A9%E5%BC%B1%E5%8B%A2%E7%A4%BE%E7%BE%A4" target="_blank"><img src="Sources/img/Recognition/ezone.png" alt="ezone"></a>
+			</div>
+			
+			<div class="recognition-box">
+				<a href="https://www.hk01.com/%E7%A4%BE%E5%8D%80%E5%B0%88%E9%A1%8C/291594/%E5%90%8C%E8%B7%AF%E4%BA%92%E5%8A%A9-%E5%90%8C%E7%82%BA%E9%81%8E%E4%BE%86%E4%BA%BA-%E5%AD%B8%E7%94%9F%E5%9C%98%E9%9A%8A%E7%A0%94%E5%89%B5%E6%84%8F%E7%A8%8B%E5%BC%8F%E5%8A%A9sen%E5%AD%B8%E7%AB%A5?itm_source=universal_search&itm_campaign=universal_search&itm_content=all&itm_medium=web" target="_blank"><img src="Sources/img/Recognition/hk01.png" alt="hk01"></a>
+			</div>
+			
+			<div class="recognition-box">
+				<a href="https://news.looop.hk/posts/8215/-%E5%9C%88%E7%9F%AD%E7%89%87-%E7%8E%A9%E9%81%8A%E6%88%B2%E8%AD%98%E5%88%A5SEN-%E5%90%8C%E5%AD%B8%E6%82%A3%E8%AE%80%E5%AF%AB%E9%9A%9C%E7%A4%99-%E5%95%9F%E7%99%BC%E4%B8%AD%E5%AD%B8%E7%94%9F%E7%99%BC%E6%98%8E%E5%AE%B6-%E9%BB%83%E8%AB%BE%E8%AC%99-AR%E6%84%9B%E5%BF%83%E7%8E%A9%E5%85%B7%E5%8A%A9%E8%A9%95%E4%BC%B0%E6%82%A3%E7%97%85%E9%A2%A8%E9%9A%AA-%E5%B0%8F%E4%B8%80%E5%A7%8B%E8%BC%94%E5%B0%8E%E6%88%90%E5%8A%9F%E7%8E%87%E9%81%94%E9%80%BE%E5%85%AB%E6%88%90" target="_blank"><img src="Sources/img/Recognition/looop.png" alt="looop"></a>
+			</div>
+			
+			<div class="recognition-box">
+				<a href="https://hk.on.cc/hk/bkn/cnt/news/20190731/bkn-20190731124850842-0731_00822_001.html" target="_blank"><img src="Sources/img/Recognition/oncc.png" alt="oncc"></a>
+			</div>
+			
+			<div class="recognition-box">
+				<a href="https://www.am730.com.hk/column/%E7%A7%91%E6%8A%80/ar-%e6%84%9b%e5%bf%83%e7%8e%a9%e5%85%b7%e8%ad%98%e5%88%a5%e5%ad%b8%e5%89%8d%e8%ae%80%e5%af%ab%e9%9a%9c%e7%a4%99%e5%ad%b8%e7%ab%a5-173925" target="_blank"><img src="Sources/img/Recognition/am730.png" alt="am730"></a>
+			</div>
+			
+			<div class="recognition-box">
+				<a href="https://www.rthk.hk/radio/pth/programme/newpeople/episode/581731" target="_blank"><img src="Sources/img/Recognition/rthk.png" alt="rthk"></a>
+			</div>
+			
+			<div class="recognition-box">
+				<a href="http://paper.wenweipo.com/2019/08/01/HK1908010037.htm" target="_blank"><img src="Sources/img/Recognition/WenWeiPo.png" alt="WenWeiPo"></a>
+			</div>
+			
+			<div class="recognition-box">
+				<a href="https://std.stheadline.com/daily/article/2041792/%E6%97%A5%E5%A0%B1-%E6%95%99%E8%82%B2-%E5%85%A8%E5%9C%8B%E7%A7%91%E5%89%B5%E5%A4%A7%E8%B3%BD-%E6%B8%AF%E7%94%9F%E5%A5%AA%E9%80%BE60%E7%8D%8E" target="_blank"><img src="Sources/img/Recognition/SingTaoDaily.png" alt="SingTaoDaily"></a>
+			</div>
+			
+			<div class="recognition-box">
+				<a href="https://hd.stheadline.com/news/daily/hk/784922/%E6%97%A5%E5%A0%B1-%E6%B8%AF%E8%81%9E-%E6%B8%AF%E4%BB%A3%E8%A1%A8%E6%8F%9A%E5%A8%81%E5%85%A8%E5%9C%8B%E7%A7%91%E5%89%B5%E8%B3%BD-%E5%8B%87%E5%A5%AA%E9%80%BE60%E7%8D%8E" target="_blank"><img src="Sources/img/Recognition/HeadLineDaily.png" alt="HeadLineDaily"></a>
+			</div>
+			
+			<div class="recognition-box">
+				<a href="https://www.bastillepost.com/hongkong/article/4830970-%ef%bb%bf%e6%b8%af%e4%bb%a3%e8%a1%a8%e6%8f%9a%e5%a8%81%e5%85%a8%e5%9c%8b%e7%a7%91%e5%89%b5%e8%b3%bd%e3%80%80%e5%8b%87%e5%a5%aa%e9%80%be60%e7%8d%8e" target="_blank"><img src="Sources/img/Recognition/BastillePost.png" alt="BastillePost"></a>
+			</div>
+			
+			<div class="recognition-box">
+				<a href="http://lionrockdaily.com/2019/08/01/10.pdf"  target="_blank"><img src="Sources/img/Recognition/LionRockDaily.png" alt="LionRockDaily"></a>
+			</div>
+			
+			<div class="recognition-box">
+				<img src="Sources/img/Recognition/HKCommercialDaily.png" alt="HKCommercialDaily">
+			</div>
+			
+			<div class="recognition-box">
+				<a href="https://www.youtube.com/watch?v=u9d_nJ56B9w&feature=youtu.be" target="_blank"><img src="Sources/img/Recognition/tvb.png" alt="tvb"></a>
+			</div>
+
+			<div class="recognition-box">
+				<a href="https://cardnews.ardyslexiatoy.com/" target="_blank"><img src="Sources/img/Recognition/CARDNews.png" alt="card-news"></a>
+			</div>
+
+			<div class="recognition-box">
+				<a href="https://www.eitp.gov.hk/tc/showcase/2018/eitp-partner-school-students-won-the-certificate-of-merit-in-the-hong-kong-ict-awards-2019-student-innovation-award-caswcmc.php" target="_blank"><img src="Sources/img/Recognition/EITP.png" alt="EITP"></a>
+			</div>
+
+			<div class="recognition-box">
+				<a href="https://topick.hket.com/article/2743251/%E3%80%90%E7%A7%91%E7%A0%94%E7%99%BC%E6%98%8E%E3%80%91%E4%B8%AD%E5%85%AD%E7%94%9F%E7%A0%94AR%E9%81%8A%E6%88%B2%E8%AD%98%E5%88%A5%E8%AE%80%E5%AF%AB%E9%9A%9C%E7%A4%99%E5%AD%B8%E7%AB%A5%E5%A5%AA%E5%86%A0%E3%80%80%E9%96%8B%E7%99%BC%E6%88%90%E6%9C%AC%E5%83%85%E7%B4%8420%E6%B8%AF%E5%85%83" target="_blank"><img src="Sources/img/Recognition/TOPick.png" alt="TOPick"></a>
+			</div>
+
+			<div class="recognition-box">
+				<a href="https://metroeducationplus.com.hk/posts/STREAM%E6%95%99%E8%82%B2-%E7%A7%91%E5%AD%B8%E6%AF%94%E8%B3%BD-%E8%A7%A3%E6%B1%BA%E7%94%9F%E6%B4%BB%E6%8C%91%E6%88%B0/1" target="_blank"><img src="Sources/img/Recognition/MetroEducationPlus.png" alt="MetroEducationPlus"></a>
+			</div>
+
+			<div class="recognition-box">
+				<a href="http://www.ecampustoday.com.hk/book-detail.php?id=3695" target="_blank"><img src="Sources/img/Recognition/ecompustoday.jpg" alt="ecompustoday"></a>
+			</div>
+
+			<div class="recognition-box">
+				<a href="https://link.ardyslexiatoy.com/scmp" target="_blank"><img src="Sources/img/Recognition/SCMPyp.png" alt="SCMP Young Post"></a>
+			</div>
+
+			<div class="recognition-box">
+				<a href="https://www.rthk.hk/radio/radio2/programme/starfromschool/episode/705163" target="_blank"><img src="Sources/img/Recognition/RTHK-2.jpg" alt="RTHK-2"></a>
+				<audio controls id="rthk-audio">
+				  <source src="Sources/audio/rthk-radio.mp3" type="audio/mpeg">
+				</audio>
+			</div>
+		</div>
+	</section> -->
+
+	<!--<center class="ads">
+	  <script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js"></script>
+	   CARD_06 
+	  <ins class="adsbygoogle"
+	       style="display:block"
+	       data-ad-client="ca-pub-6881562947845271"
+	       data-ad-slot="2765570113"
+	       data-ad-format="auto"
+	       data-full-width-responsive="true"></ins>
+	  <script>
+	       (adsbygoogle = window.adsbygoogle || []).push({});
+	  </script>
+	</center>-->
+	
+	<!-- <section class="video" id="video"><div class="header-box"></div>
+		<div data-aos="fade-up" class="content-title-container">
+			<h1>介紹影片</h1>
+			<hr>
+		</div>
+
+		<div class="video-carousel-container" data-aos="fade-up">
+			<div class="wrapper">
+				<div class="owl-carousel owl-theme">
+					
+					<div class="item">
+						<div class="video-container">
+							<iframe width="800" height="450" src="https://www.youtube.com/embed/DRhilPB5ErI" frameborder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+						</div>
+					</div>
+
+			    <div class="item">
+			    	<div class="video-container">
+							<iframe width="800" height="450" src="https://www.youtube.com/embed/u9d_nJ56B9w" frameborder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+						</div>
+					</div>
+
+			    <div class="item">
+			    	<div class="video-container">
+							<iframe width="800" height="450" src="https://www.youtube.com/embed/04AgwyM5vgs" frameborder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+						</div>
+					</div>
+
+					<div class="item">
+						<div class="video-container">
+							<iframe width="800" height="450" src="https://www.youtube.com/embed/e4Zgt9c4puU" frameborder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+						</div>
+					</div>
+
+					<div class="item">
+						<div class="video-container">
+							<iframe width="800" height="450" src="https://www.youtube.com/embed/UhbXbBlTSKo" frameborder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+						</div>
+					</div>
+				</div>
+							
+				<div class="control">
+					<div class="nav-control">
+						<span class="prev nav-btn"><i class="fas fa-angle-left"></i></span>
+						<span class="next nav-btn"><i class="fas fa-angle-right"></i></span>
+					</div>
+				</div>
+			</div>
+		</div>
+		
+	</section> -->
+	
+<!--	<div class="space"></div> -->
+
+	<!-- <center class="ads">
+	  <script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js"></script>
+	  CARD_02
+	  <ins class="adsbygoogle"
+	       style="display:block"
+	       data-ad-client="ca-pub-6881562947845271"
+	       data-ad-slot="6949832489"
+	       data-ad-format="auto"
+	       data-full-width-responsive="true"></ins>
+	  <script>
+	       (adsbygoogle = window.adsbygoogle || []).push({});
+	  </script>
+	</center> -->
+	
+	<footer class="footer">  
+		<div class="footer-social-media"> 
+			<!-- Add icon library -->
+
+			<!-- Add font awesome icons -->
+			<a href="https://www.facebook.com/AR-愛心玩具識別學前讀寫障礙學童-2162670473802255/?modal=admin_todo_tour" target="_blank"><i class="fa fa-facebook social-media-icon" id="facebook-icon"></i></a>
+			<a href="https://www.instagram.com/ar_dyslexia_toy/" target="_blank"><i class="fab fa-instagram social-media-icon" id="instragram-icon"></i></a>
+			<a href="https://www.youtube.com/channel/UCMRipUGgG48_RuDIIQr8EGA" target="_blank"><i class="fa fa-youtube social-media-icon" id="youtube-icon"></i></a>
+		</div>
+		
+		<div class="footer-inner-links">
+			<ul>
+				<li><a href="#">主頁</a></li>
+				<!-- <li><a href="#latest-news">最新消息</a></li> -->
+				<li><a href="#idea">作品構思</a></li>
+				<li><a href="#feature">作品特點</a></li>
+				<li><a href="#work-flow">發明品運作流程</a></li>
+				<li><a href="#report">分析報告</a></li>
+				<li><a href="https://www.ardyslexiatoy.com">發明品網頁</a></li>
+				<!-- <li><a href="#awards">相關獎項</a></li>
+				<li><a href="#recognition">傳媒報導</a></li>
+				<li><a href="#video">影片介紹</a></li>
+				<li><a href="#timeline">作品歷程</a></li>
+				<li><a href=store.html>商店 Beta</a></li> -->
+			</ul>
+		</div>
+		
+		<p class="footer-copyright">版權所有 © 2020 版權所有 - C.A.R.D.</p>
+
+		<div class="bottom">
+			<!-- hitwebcounter Code START -->
+			<!-- <a class="counter" target="_blank">您是第
+			<img src="https://hitwebcounter.com/counter/counter.php?page=7536492&style=0005&nbdigits=5&type=page&initCount=6685" title="Web Counter" Alt="counter free"   border="0" width="80px"> 名訪客來到我們的網站。</a> -->
+
+			<!-- <div id="google_translate_element"></div>
+			<script type="text/javascript">
+			function googleTranslateElementInit() {
+			  new google.translate.TranslateElement({pageLanguage: 'en'}, 'google_translate_element');
+			}
+			</script> -->
+
+			<script type="text/javascript" src="//translate.google.com/translate_a/element.js?cb=googleTranslateElementInit"></script>
+		</div>
+	</footer>
+	
+	<div class="popup-div" id="subscribe-popup">
+		<div class="popup-container">
+			<p id="popup-content">訂閱我們以獲得最析科技資訊</p>
+			
+			<div class="popup-btn">
+				<button onclick="PopupSubscribe()" id="subscribe"></button>
+				<button onclick="ContinueToWeb()" id="continue-to-web">Continue To Web</button>
+			</div>
+			
+			<i class="fas fa-times cancel" onclick="ClosePopup()"></i>
+		</div>
+	</div>
+	
+	<!--language-seletor-->
+	<div class="lang">
+		<div class="lang-container">
+			<ul>
+				<li><a href="index.html">中文(繁體)</a></li>
+				<li><a href="en/index.html">English</a></li>
+			</ul>
+			
+			<i class="fas fa-times lang-cancel" onclick="CloseLang()"></i>
+		</div>
+	</div>
+
+	<!-- script -->
+	<!--Animation on scroll script-->
+	<script>
+		AOS.init({
+			duration: 1000,
+		});
+	</script>
+	
+	<!--Parallax scrolling-->
+	<script>
+      var rellax = new Rellax('.rellax');
+  </script>
+
+	<script src="js/owl_carousel_setup.js"></script>
+	<script src="Library/OwlCarousel2-2.3.4/dist/owl.carousel.min.js"></script>
+	<script src="js/navbar.js"></script>
+	<script src="js/firebase.js"></script>
+	<script src="js/lang.js"></script>
+	<script src="js/BackToTop.js"></script>
+	<script src="js/AnchorLink.js"></script>
+	<script src="js/HamburgerIconAnim.js"></script>
+	<!-- <script src="js/accordion.js"></script> -->
+
+
+	<!--Start of Tawk.to Script-->
+	<!-- <script type="text/javascript">
+	var Tawk_API=Tawk_API||{}, Tawk_LoadStart=new Date();
+	(function(){
+	var s1=document.createElement("script"),s0=document.getElementsByTagName("script")[0];
+	s1.async=true;
+	s1.src='https://embed.tawk.to/5f1c20295e51983a11f5c874/default';
+	s1.charset='UTF-8';
+	s1.setAttribute('crossorigin','*');
+	s0.parentNode.insertBefore(s1,s0);
+	})();
+	</script> -->
+	<!--End of Tawk.to Script-->
+
+	<!-- Global site tag (gtag.js) - Google Analytics -->
+	<script async src="https://www.googletagmanager.com/gtag/js?id=UA-147386646-1"></script>
+	<script>
+	  window.dataLayer = window.dataLayer || [];
+	  function gtag(){dataLayer.push(arguments);}
+	  gtag('js', new Date());
+
+	  gtag('config', 'UA-147386646-1');
+	</script>
+	<!-- additional copy -->
+	<script language="javascript" type="text/javascript">
+	jQuery(document).on('copy', function(e)
+		{
+		  var selected = window.getSelection();
+		  var selectedText = selected.toString().replace(/\n/g, '<br>');  // Solve the line breaks conversion issue
+		  var copyFooter = '<br><br>詳情請瀏覽C.A.R.D. 或到 www.ardyslexiatoy.com 了解更多';
+		  var copyHolder = $('<div>', {id: 'temp', html: selectedText + copyFooter, style: {position: 'absolute', left: '-99999px'}});
+		    
+		  $('body').append(copyHolder);
+		  selected.selectAllChildren( copyHolder[0] );
+		  window.setTimeout(function() {
+		      copyHolder.remove();
+		  },0);
+		});
+	</script>
+
+	<script>
+		var isUserRedirectlang = false;
+		function RedirectLang() {
+			isUserRedirectlang = true;
+			// alert("User redirected to chinese!!!");
+		}
+		var userLang = navigator.language;
+
+		if (isUserRedirectlang == false) {
+			if (!userLang.includes('zh')) {
+				// window.location.replace('/en/index.html');
+			}
+		} else {
+			// window.location.replace('/index.html');
+		}
+		
+	</script>
+</body>
+</html>
